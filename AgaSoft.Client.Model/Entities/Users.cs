@@ -12,8 +12,7 @@ namespace AgaSoft.Client.Model.Entities
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-
-        public int IdRoles { get; set; }
+        
         public UserRoles Roles { get; set; }
     }
 }

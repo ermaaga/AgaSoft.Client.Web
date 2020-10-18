@@ -1,0 +1,14 @@
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Providers.deps.json
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Providers.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Providers.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Interfaces.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Interfaces.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.csprojAssemblyReference.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.AssemblyInfoInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.AssemblyInfo.cs
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.csproj.CoreCompileInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.csproj.CopyComplete
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Providers\obj\Debug\netcoreapp3.1\AgaSoft.Client.Providers.pdb

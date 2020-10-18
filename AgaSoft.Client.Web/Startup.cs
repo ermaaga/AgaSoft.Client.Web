@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AgaSoft.Client.Interfaces;
 using AgaSoft.Client.Model;
+using AgaSoft.Client.Providers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,8 +31,15 @@ namespace AgaSoft.Client.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<AgaSoftRepositoryContext>(options =>
-            options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AgaSoftRepositoryContext>(options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+
+            var optionsBuilder = new DbContextOptionsBuilder<AgaSoftRepositoryContext>();
+            optionsBuilder.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+
+         
+                 services.AddSingleton<IAuthenticationProvider>(s => new AuthenticationProvider(optionsBuilder.Options));                
+            
+            //services.AddSingleton(typeof(IAuthenticationProvider), typeof(AuthenticationProvider));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +53,8 @@ namespace AgaSoft.Client.Web
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

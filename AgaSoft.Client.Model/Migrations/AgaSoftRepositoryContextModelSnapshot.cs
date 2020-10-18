@@ -17,6 +17,24 @@ namespace AgaSoft.Client.Model.Migrations
                 .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("AgaSoft.Client.Model.Entities.Roles", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<int?>("UserRolesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserRolesId");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("AgaSoft.Client.Model.Entities.UserRoles", b =>
                 {
                     b.Property<int>("Id")
@@ -38,9 +56,6 @@ namespace AgaSoft.Client.Model.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("text");
 
-                    b.Property<int>("IdRoles")
-                        .HasColumnType("int");
-
                     b.Property<string>("Password")
                         .HasColumnType("text");
 
@@ -55,6 +70,13 @@ namespace AgaSoft.Client.Model.Migrations
                     b.HasIndex("RolesId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("AgaSoft.Client.Model.Entities.Roles", b =>
+                {
+                    b.HasOne("AgaSoft.Client.Model.Entities.UserRoles", null)
+                        .WithMany("Roles")
+                        .HasForeignKey("UserRolesId");
                 });
 
             modelBuilder.Entity("AgaSoft.Client.Model.Entities.Users", b =>

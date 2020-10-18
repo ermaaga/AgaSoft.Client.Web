@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AgaSoft.Client.Interfaces\AgaSoft.Client.Interfaces.csproj" />
     <ProjectReference Include="..\AgaSoft.Client.Model\AgaSoft.Client.Model.csproj" />
+    <ProjectReference Include="..\AgaSoft.Client.Providers\AgaSoft.Client.Providers.csproj" />
   </ItemGroup>
 
 

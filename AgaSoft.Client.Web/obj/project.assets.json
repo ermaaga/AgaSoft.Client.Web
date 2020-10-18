@@ -1897,6 +1897,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "AgaSoft.Client.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/AgaSoft.Client.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AgaSoft.Client.Interfaces.dll": {}
+        }
+      },
       "AgaSoft.Client.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1909,6 +1919,20 @@
         },
         "runtime": {
           "bin/placeholder/AgaSoft.Client.Model.dll": {}
+        }
+      },
+      "AgaSoft.Client.Providers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AgaSoft.Client.Interfaces": "1.0.0",
+          "AgaSoft.Client.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AgaSoft.Client.Providers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AgaSoft.Client.Providers.dll": {}
         }
       }
     }
@@ -6561,15 +6585,27 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "AgaSoft.Client.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../AgaSoft.Client.Interfaces/AgaSoft.Client.Interfaces.csproj",
+      "msbuildProject": "../AgaSoft.Client.Interfaces/AgaSoft.Client.Interfaces.csproj"
+    },
     "AgaSoft.Client.Model/1.0.0": {
       "type": "project",
       "path": "../AgaSoft.Client.Model/AgaSoft.Client.Model.csproj",
       "msbuildProject": "../AgaSoft.Client.Model/AgaSoft.Client.Model.csproj"
+    },
+    "AgaSoft.Client.Providers/1.0.0": {
+      "type": "project",
+      "path": "../AgaSoft.Client.Providers/AgaSoft.Client.Providers.csproj",
+      "msbuildProject": "../AgaSoft.Client.Providers/AgaSoft.Client.Providers.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AgaSoft.Client.Interfaces >= 1.0.0",
       "AgaSoft.Client.Model >= 1.0.0",
+      "AgaSoft.Client.Providers >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.9",
       "MySql.Data.EntityFrameworkCore >= 8.0.21"
@@ -6601,8 +6637,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\AgaSoft\\source\\repos\\AgaSoft.Client.Web\\AgaSoft.Client.Interfaces\\AgaSoft.Client.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\AgaSoft\\source\\repos\\AgaSoft.Client.Web\\AgaSoft.Client.Interfaces\\AgaSoft.Client.Interfaces.csproj"
+            },
             "C:\\Users\\AgaSoft\\source\\repos\\AgaSoft.Client.Web\\AgaSoft.Client.Model\\AgaSoft.Client.Model.csproj": {
               "projectPath": "C:\\Users\\AgaSoft\\source\\repos\\AgaSoft.Client.Web\\AgaSoft.Client.Model\\AgaSoft.Client.Model.csproj"
+            },
+            "C:\\Users\\AgaSoft\\source\\repos\\AgaSoft.Client.Web\\AgaSoft.Client.Providers\\AgaSoft.Client.Providers.csproj": {
+              "projectPath": "C:\\Users\\AgaSoft\\source\\repos\\AgaSoft.Client.Web\\AgaSoft.Client.Providers\\AgaSoft.Client.Providers.csproj"
             }
           }
         }

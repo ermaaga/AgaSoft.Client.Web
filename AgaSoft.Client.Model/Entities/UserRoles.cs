@@ -12,5 +12,6 @@ namespace AgaSoft.Client.Model.Entities
         public string Role { get; set; }
 
         public List<Users> Users { get; } = new List<Users>();
+        public List<Roles> Roles { get; } = new List<Roles>();
     }
 }
