@@ -1,0 +1,11 @@
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.deps.json
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Debug\netcoreapp3.1\AgaSoft.Client.Model.AssemblyInfoInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Debug\netcoreapp3.1\AgaSoft.Client.Model.AssemblyInfo.cs
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Debug\netcoreapp3.1\AgaSoft.Client.Model.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Debug\netcoreapp3.1\AgaSoft.Client.Model.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.runtimeconfig.json
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Debug\netcoreapp3.1\AgaSoft.Client.Model.runtimeconfig.dev.json
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Debug\netcoreapp3.1\AgaSoft.Client.Model.genruntimeconfig.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Debug\netcoreapp3.1\AgaSoft.Client.Model.csproj.CoreCompileInputs.cache
