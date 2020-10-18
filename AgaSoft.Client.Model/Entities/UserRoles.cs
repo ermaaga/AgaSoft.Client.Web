@@ -5,15 +5,12 @@ using System.Text;
 
 namespace AgaSoft.Client.Model.Entities
 {
-    public class Users
+    public class UserRoles
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
+        public string Role { get; set; }
 
-        public int IdRoles { get; set; }
-        public UserRoles Roles { get; set; }
+        public List<Users> Users { get; } = new List<Users>();
     }
 }
