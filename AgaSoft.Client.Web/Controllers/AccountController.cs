@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AgaSoft.Client.Web.Controllers
 {
+
     [ApiController]
     [Route("[controller]")]
     public class AccountController : ControllerBase
@@ -21,6 +22,14 @@ namespace AgaSoft.Client.Web.Controllers
         {
             _provider = provider;
         }
+        /// <summary>
+        /// Registrazione utente
+        /// </summary>
+        /// <param name="request"></param>
+        /// <response code="200">Returns OK</response>
+        /// <response code="401">Ui not autothorize</response>
+        /// <response code="500">Internal server error</response>
+        /// <returns></returns>
         [HttpPost("Register")]
         [ProducesDefaultResponseType]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -29,10 +38,50 @@ namespace AgaSoft.Client.Web.Controllers
         public ActionResult<ResponseBase> DestroySessions(RegisterRequest request)
         {
             ResponseBase registerResponse = new ResponseBase();
-            ActionResult result = null;            
+            ActionResult result = null;
             try
             {
-                registerResponse.Result= _provider.Register(request.Email, request.Password, out string message);
+                registerResponse.Result = _provider.Register(request.Name, request.LastName, request.Username, request.Email, request.Password, request.Description, out string message);
+                registerResponse.Message = message;
+                result = Ok(registerResponse);
+
+            }
+            catch (Exception ex)
+            {
+                registerResponse.Message = ex.Message;
+                result = StatusCode(500, registerResponse);
+            }
+            return result;
+        }
+        /// <summary>
+        /// Login utente
+        /// </summary>
+        /// <param name="request"></param>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "Username": "Item1",
+        ///        "Password": "Item2"
+        ///     }
+        /// </remarks>
+        /// <response code="200">Returns OK</response>
+        /// <response code="401">Ui not autothorize</response>
+        /// <response code="500">Internal server error</response>
+        /// <returns></returns>
+        [HttpPost("Login")]
+        [ProducesDefaultResponseType]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public ActionResult<ResponseBase> Login(LoginRequest request)
+        {
+            ResponseBase registerResponse = new ResponseBase();
+            ActionResult result = null;
+            try
+            {
+                registerResponse.Result = _provider.Login(request.Username, request.Password, out string message);
                 registerResponse.Message = message;
                 result = Ok(registerResponse);
 
@@ -45,24 +94,5 @@ namespace AgaSoft.Client.Web.Controllers
             return result;
         }
 
-
-
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-     
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
     }
 }

@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+
 namespace AgaSoft.Client.Web
 {
     public class Program
@@ -16,12 +17,10 @@ namespace AgaSoft.Client.Web
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-
             CreateDbIfNotExists(host);
-
             host.Run();
-        }
 
+        }
         private static void CreateDbIfNotExists(IHost host)
         {
             using (var scope = host.Services.CreateScope())

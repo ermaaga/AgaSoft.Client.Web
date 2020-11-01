@@ -1,0 +1,9 @@
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\bin\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.deps.json
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\bin\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\bin\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\obj\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.csprojAssemblyReference.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\obj\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.AssemblyInfoInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\obj\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.AssemblyInfo.cs
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\obj\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\obj\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Interfaces\obj\Release\netcoreapp3.1\AgaSoft.Client.Interfaces.pdb

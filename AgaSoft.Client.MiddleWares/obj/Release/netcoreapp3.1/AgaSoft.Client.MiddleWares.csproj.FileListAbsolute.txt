@@ -1,0 +1,9 @@
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\bin\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.deps.json
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\bin\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\bin\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.pdb
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.csprojAssemblyReference.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.AssemblyInfoInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.AssemblyInfo.cs
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.csproj.CoreCompileInputs.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Release\netcoreapp3.1\AgaSoft.Client.MiddleWares.pdb

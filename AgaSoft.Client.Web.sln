@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgaSoft.Client.Web", "AgaSo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgaSoft.Client.Model", "AgaSoft.Client.Model\AgaSoft.Client.Model.csproj", "{C2055A96-C3DD-4013-941A-1173810BBD94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgaSoft.Client.Interfaces", "AgaSoft.Client.Interfaces\AgaSoft.Client.Interfaces.csproj", "{7C7141D9-15AA-49ED-8C33-535BA660BDB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgaSoft.Client.Interfaces", "AgaSoft.Client.Interfaces\AgaSoft.Client.Interfaces.csproj", "{7C7141D9-15AA-49ED-8C33-535BA660BDB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgaSoft.Client.Providers", "AgaSoft.Client.Providers\AgaSoft.Client.Providers.csproj", "{683AFCAA-CED7-47AB-AC30-C2F3027E1F20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgaSoft.Client.Providers", "AgaSoft.Client.Providers\AgaSoft.Client.Providers.csproj", "{683AFCAA-CED7-47AB-AC30-C2F3027E1F20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgaSoft.Client.MiddleWares", "AgaSoft.Client.MiddleWares\AgaSoft.Client.MiddleWares.csproj", "{3A9A9A96-FD93-46AD-BA74-23B0A7D678EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{683AFCAA-CED7-47AB-AC30-C2F3027E1F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{683AFCAA-CED7-47AB-AC30-C2F3027E1F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{683AFCAA-CED7-47AB-AC30-C2F3027E1F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9A9A96-FD93-46AD-BA74-23B0A7D678EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9A9A96-FD93-46AD-BA74-23B0A7D678EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9A9A96-FD93-46AD-BA74-23B0A7D678EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9A9A96-FD93-46AD-BA74-23B0A7D678EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
