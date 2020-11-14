@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-
 namespace AgaSoft.Client.Web
 {
     public class Program
@@ -28,9 +27,9 @@ namespace AgaSoft.Client.Web
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<AgaSoftRepositoryContext>();
+                    var context = services.GetRequiredService<AgaSoftContext>();
                     context.Database.EnsureCreated();
-                    //DbInitializer.Initialize(context);
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

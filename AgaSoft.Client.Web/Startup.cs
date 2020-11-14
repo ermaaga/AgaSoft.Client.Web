@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using AgaSoft.Client.Interfaces;
 using AgaSoft.Client.Model;
 using AgaSoft.Client.Providers;
+using AgaSoft.Client.Web.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,14 +48,14 @@ namespace AgaSoft.Client.Web
                                   });
             });
             services.AddControllers();
-            services.AddDbContext<AgaSoftRepositoryContext>(options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AgaSoftContext>(options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.ForwardedHeaders =
                     ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
             });
 
-            var optionsBuilder = new DbContextOptionsBuilder<AgaSoftRepositoryContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<AgaSoftContext>();
             optionsBuilder.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
 
             services.AddSingleton<IAuthenticationProvider>(s => new AuthenticationProvider(optionsBuilder.Options));
@@ -83,29 +84,25 @@ namespace AgaSoft.Client.Web
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
-            //services.AddSingleton(typeof(IAuthenticationProvider), typeof(AuthenticationProvider));
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.TokenValidationParameters = new TokenValidationParameters
-            //    {
-            //        ValidateIssuer = true,
-            //        ValidateAudience = true,
-            //        ValidateIssuerSigningKey = true,
+            services.AddAuthentication(option =>
+            {
+                option.DefaultAuthenticateScheme = "JwtBearer";
+                option.DefaultChallengeScheme= "JwtBearer";
+            }
+            )
+            .AddJwtBearer("JwtBearer",jwtOptions => 
+            {
+                jwtOptions.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    IssuerSigningKey = TokenController.SIGNING_KEY,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateIssuerSigningKey = true,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.FromMinutes(5)               
 
-            //        //Importante: indicare lo stesso Issuer, Audience e chiave segreta
-            //        //usati anche nel JwtTokenMiddleware
-            //        ValidIssuer = "Issuer",
-            //        ValidAudience = "Audience",
-            //        IssuerSigningKey = new SymmetricSecurityKey(
-            //          Encoding.UTF8.GetBytes("MiaChiaveSegreta")
-            //      ),
-            //        //Tolleranza sulla data di scadenza del token
-            //        ClockSkew = TimeSpan.Zero
-            //    };
-            //});
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -139,6 +136,8 @@ namespace AgaSoft.Client.Web
             {
                 endpoints.MapControllers();
             });
+
+            app.UseAuthentication();
         }
     }
 }

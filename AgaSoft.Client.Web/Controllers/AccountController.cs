@@ -7,6 +7,7 @@ using AgaSoft.Client.Model.Entities;
 using AgaSoft.Client.Providers;
 using AgaSoft.Client.Web.ControllerRequest;
 using AgaSoft.Client.Web.ControllerResponses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,7 @@ namespace AgaSoft.Client.Web.Controllers
 
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class AccountController : ControllerBase
     {
         private IAuthenticationProvider _provider;
@@ -41,9 +43,9 @@ namespace AgaSoft.Client.Web.Controllers
             ActionResult result = null;
             try
             {
-                registerResponse.Result = _provider.Register(request.Name, request.LastName, request.Username, request.Email, request.Password, request.Description, out string message);
-                registerResponse.Message = message;
-                result = Ok(registerResponse);
+                //registerResponse.Result = _provider.Register(request.Name, request.LastName, request.Username, request.Email, request.Password, request.Description, out string message);
+               // registerResponse.Message = message;
+                //result = Ok(registerResponse);
 
             }
             catch (Exception ex)
@@ -81,9 +83,9 @@ namespace AgaSoft.Client.Web.Controllers
             ActionResult result = null;
             try
             {
-                registerResponse.Result = _provider.Login(request.Username, request.Password, out string message);
-                registerResponse.Message = message;
-                result = Ok(registerResponse);
+              //  registerResponse.Result = _provider.Login(request.Username, request.Password, out string message);
+              // registerResponse.Message = message;
+              //  result = Ok(registerResponse);
 
             }
             catch (Exception ex)

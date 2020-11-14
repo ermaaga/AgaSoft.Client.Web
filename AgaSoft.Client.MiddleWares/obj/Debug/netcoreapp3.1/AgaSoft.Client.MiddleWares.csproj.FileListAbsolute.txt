@@ -6,4 +6,3 @@ C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\bin\
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Debug\netcoreapp3.1\AgaSoft.Client.MiddleWares.csproj.CoreCompileInputs.cache
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Debug\netcoreapp3.1\AgaSoft.Client.MiddleWares.dll
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Debug\netcoreapp3.1\AgaSoft.Client.MiddleWares.pdb
-C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.MiddleWares\obj\Debug\netcoreapp3.1\AgaSoft.Client.MiddleWares.csprojAssemblyReference.cache

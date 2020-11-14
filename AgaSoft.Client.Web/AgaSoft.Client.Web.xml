@@ -4,5 +4,34 @@
         <name>AgaSoft.Client.Web</name>
     </assembly>
     <members>
+        <member name="M:AgaSoft.Client.Web.Controllers.AccountController.DestroySessions(AgaSoft.Client.Web.ControllerRequest.RegisterRequest)">
+            <summary>
+            Registrazione utente
+            </summary>
+            <param name="request"></param>
+            <response code="200">Returns OK</response>
+            <response code="401">Ui not autothorize</response>
+            <response code="500">Internal server error</response>
+            <returns></returns>
+        </member>
+        <member name="M:AgaSoft.Client.Web.Controllers.AccountController.Login(AgaSoft.Client.Web.ControllerRequest.LoginRequest)">
+             <summary>
+             Login utente
+             </summary>
+             <param name="request"></param>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "Username": "Item1",
+                    "Password": "Item2"
+                 }
+             </remarks>
+             <response code="200">Returns OK</response>
+             <response code="401">Ui not autothorize</response>
+             <response code="500">Internal server error</response>
+             <returns></returns>
+        </member>
     </members>
 </doc>

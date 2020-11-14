@@ -3,7 +3,6 @@ C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Releas
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Release\netcoreapp3.1\AgaSoft.Client.Model.runtimeconfig.dev.json
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Release\netcoreapp3.1\AgaSoft.Client.Model.dll
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\bin\Release\netcoreapp3.1\AgaSoft.Client.Model.pdb
-C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Release\netcoreapp3.1\AgaSoft.Client.Model.csprojAssemblyReference.cache
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Release\netcoreapp3.1\AgaSoft.Client.Model.AssemblyInfoInputs.cache
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Release\netcoreapp3.1\AgaSoft.Client.Model.AssemblyInfo.cs
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Model\obj\Release\netcoreapp3.1\AgaSoft.Client.Model.csproj.CoreCompileInputs.cache

@@ -1,48 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using AgaSoft.Client.Web.ControllerRequest;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AgaSoft.Client.Web.Controllers
 {
-    [Route("api/[controller]")]
+   
     public class TokenController : Controller
     {
-        // POST api/Token
-        [HttpPost]
-        public IActionResult GetToken([FromBody] LoginRequest tokenRequest)
+        private const string SECRET_KEY = "this is my custom Secret key for authnetication";
+        public static readonly SymmetricSecurityKey SIGNING_KEY = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(TokenController.SECRET_KEY));
+
+        [HttpGet]
+        [Route("api/Token/{username}/{password}")]
+        public IActionResult Get(string username, string password)
         {
-            //LoginRequest è una nostra classe contenente le proprietà Username e Password
-            //Avvisiamo il client se non ha fornito tali valori
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-            //Lo avvisiamo anche se non ha fornito credenziali valide
-            if (!VerifyCredentials(tokenRequest.Username, tokenRequest.Password))
-            {
-                return Unauthorized();
-            }
-
-            //Ok, l'utente ha fornito credenziali valide, creiamogli una ClaimsIdentity
-            var identity = new ClaimsIdentity(JwtBearerDefaults.AuthenticationScheme);
-            //Aggiungiamo uno o più claim relativi all'utente loggato
-            identity.AddClaim(new Claim(ClaimTypes.Name, tokenRequest.Username));
-            //Incapsuliamo l'identità in una ClaimsPrincipal l'associamo alla richiesta corrente
-            HttpContext.User = new ClaimsPrincipal(identity);
-
-            //Non è necessario creare il token qui, lo possiamo creare da un middleware
-            return NoContent();
+            if (username == password)
+                return new ObjectResult(GenerateToken(username));
+            else
+                return BadRequest();           
         }
 
-        private bool VerifyCredentials(string username, string password)
+        private object GenerateToken(string username)
         {
-            //TODO: Modificare questa implementazione, che è puramente dimostrativa
-            return username == "Admin" && password == "Password";
+            var token = new JwtSecurityToken(
+                claims: new Claim[]
+                {
+                    new Claim(ClaimTypes.Name,username)
+                },
+                notBefore: new DateTimeOffset(DateTime.Now).DateTime,
+                expires: new DateTimeOffset(DateTime.Now.AddMinutes(60)).DateTime,
+                signingCredentials: new SigningCredentials(SIGNING_KEY, SecurityAlgorithms.HmacSha256)
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

@@ -69,3 +69,8 @@ C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\obj\Release\
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\obj\Release\netcoreapp3.1\AgaSoft.Client.Web.dll
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\obj\Release\netcoreapp3.1\AgaSoft.Client.Web.pdb
 C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\obj\Release\netcoreapp3.1\AgaSoft.Client.Web.genruntimeconfig.cache
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\bin\Release\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\AgaSoft\source\repos\AgaSoft.Client.Web\AgaSoft.Client.Web\obj\Release\netcoreapp3.1\AgaSoft.Client.Web.MvcApplicationPartsAssemblyInfo.cs
